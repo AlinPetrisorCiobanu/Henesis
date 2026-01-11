@@ -1,0 +1,30 @@
+
+#nav_bar{
+    width: 92%;
+    height: 5vh;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+#menu{
+    display: flex;
+}
+
+#menu div{
+    padding: 1.5em;
+    border-left: 1px solid black;
+    cursor: pointer;
+}
+
+#menu div:nth-last-child(1){
+
+    border-right: 1px solid black;
+}
+
+#menu div:hover{
+    background-color: rgb(171, 210, 245);
+}
