@@ -70,15 +70,17 @@
     font-size: 1.4em;
     border-radius: 5px;
 }
-.active_menu{
+
+.active_menu {
     display: flex;
 }
 
 
 
 @media (min-width: 768px) {
+
     #nav_bar {
-        width: 92%;
+        width: 94%;
         height: 5vh;
         color: black;
         display: flex;
@@ -86,21 +88,33 @@
         justify-content: space-between;
         align-items: center;
         padding-left: 4%;
-        padding-right: 4%;
+        padding-right: 2%;
     }
 
     .menu_hamburguesa {
         display: none;
     }
 
-    #menu {
+    .menu_nav {
+        width: auto;
+        min-height: 0;
         display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        border: 0;
+        background-color: rgb(255, 255, 255);
+        padding-top: 0;
     }
 
-    #menu div {
-        padding: 1.5em;
+    .menu_nav div {
+        width: auto;
+        text-align: center;
+        padding: 1.2em;
+        border-bottom: 0;
+        font-size: 1.1em;
+        border-radius: 0;
         border-left: 1px solid black;
-        cursor: pointer;
     }
 
     #menu div:nth-last-child(1) {
@@ -111,4 +125,5 @@
     #menu div:hover {
         background-color: rgb(171, 210, 245);
     }
+
 }
