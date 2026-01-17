@@ -17,7 +17,7 @@ const Nav_bar = () => {
 
         <div id="nav_bar">
             <div className="nav_info">
-                <div className="logo">Logo</div>
+                <div className="logo" onClick={()=>go_to('')}>Logo</div>
                 <div id="hamburguesa" className="menu_hamburguesa" onClick={active_menu}>
                     <div></div>
                     <div></div>
@@ -25,7 +25,7 @@ const Nav_bar = () => {
                 </div>
             </div>
             <div id="menu" className="menu_nav">
-                <div onClick={()=>go_to("")}>Inicio</div>
+                <div onClick={()=>go_to('')}>Inicio</div>
                 <div onClick={()=>go_to('proyectos')}>Proyectos</div>
                 <div onClick={()=>go_to('reformas')}>Reformas</div>
                 <div onClick={()=>go_to('blog')}>Blog</div>
