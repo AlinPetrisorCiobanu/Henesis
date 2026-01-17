@@ -1,11 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import "../../style/nav_bar.css"
 
 const Nav_bar = () => {
+    const navigate = useNavigate();
 
     const active_menu = () => {
     hamburguesa.classList.toggle('active');
-    menu.classList.toggle('active_menu');
-};
+    menu.classList.toggle('active_menu')
+    };
+
+    const go_to = (path) => {
+        navigate(`/${path}`)
+    }
 
     return (
 
@@ -17,14 +23,13 @@ const Nav_bar = () => {
                     <div></div>
                     <div></div>
                 </div>
-                <div>Home</div>
             </div>
             <div id="menu" className="menu_nav">
-                <div>option_1</div>
-                <div>option_2</div>
-                <div>option_3</div>
-                <div>option_4</div>
-                <div>option_5</div>
+                <div onClick={()=>go_to("")}>Inicio</div>
+                <div onClick={()=>go_to('proyectos')}>Proyectos</div>
+                <div onClick={()=>go_to('reformas')}>Reformas</div>
+                <div onClick={()=>go_to('blog')}>Blog</div>
+                <div onClick={()=>go_to('contacto')}>Contacto</div>
             </div>
         </div>
 
