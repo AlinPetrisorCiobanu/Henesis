@@ -10,8 +10,9 @@ const Nav_bar = () => {
     const navigate = useNavigate();
 
     const active_menu = () => {
-    hamburguesa.classList.toggle('active');
+    hamburguesa.classList.toggle('active')
     menu.classList.toggle('active_menu')
+    document.body.classList.toggle("no-scroll")
     };
 
     const go_to = (path) => {
