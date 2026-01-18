@@ -1,5 +1,5 @@
 import Nav_bar from "../../components/nav_bar/nav_bar"
-import "../../style/home_style.css"
+import "../../assets/style/home_style.css"
 
 const Home = () => {
     return (

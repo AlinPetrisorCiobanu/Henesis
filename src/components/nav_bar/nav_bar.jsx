@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import "../../style/nav_bar.css"
+import "../../assets/style/nav_bar.css"
+import logo from "../../assets/img/logo_henesis.png"
 
 const Nav_bar = () => {
     const navigate = useNavigate();
@@ -17,7 +18,9 @@ const Nav_bar = () => {
 
         <div id="nav_bar">
             <div className="nav_info">
-                <div className="logo" onClick={()=>go_to('')}>Logo</div>
+                <div className="logo" onClick={()=>go_to('')}>
+                    <img src={logo} alt="Logo de la empresa" />
+                </div>
                 <div id="hamburguesa" className="menu_hamburguesa" onClick={active_menu}>
                     <div></div>
                     <div></div>
