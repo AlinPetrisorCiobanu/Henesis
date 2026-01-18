@@ -4,8 +4,8 @@ import "../../assets/style/home_style.css"
 const Home = () => {
     return (
         <div>
-            <Nav_bar />
             <div className="Container">
+            <Nav_bar />
                 <div className="home">
                     <h1 className="Home">Página Principal de HENESIS</h1>
                 </div>

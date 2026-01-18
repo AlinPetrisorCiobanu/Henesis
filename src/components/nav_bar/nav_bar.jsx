@@ -1,6 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import "../../assets/style/nav_bar.css"
 import logo from "../../assets/img/logo_henesis.png"
+import instagram from "../../assets/icons/instagram.svg"
+import facebook from "../../assets/icons/facebook.svg"
+import tiktok from "../../assets/icons/tiktok.svg"
+
 
 const Nav_bar = () => {
     const navigate = useNavigate();
@@ -33,6 +37,11 @@ const Nav_bar = () => {
                 <div onClick={()=>go_to('reformas')}>Reformas</div>
                 <div onClick={()=>go_to('blog')}>Blog</div>
                 <div onClick={()=>go_to('contacto')}>Contacto</div>
+                <div className="icons">
+                    <img src={instagram} alt="logo instagram coloreado" />
+                    <img src={facebook} alt="logo facebook coloreado" />
+                    <img src={tiktok} alt="logo tiktok coloreado" />
+                </div>
             </div>
         </div>
 

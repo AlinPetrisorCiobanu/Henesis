@@ -2,15 +2,17 @@ body{
     margin: 0;
     padding: 0;
     width: 100vw;
-    overflow-x: hidden;
+    height: 100vh;
 }
 
 .Container{
     width: 100%;
     min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-image: url(../img/top-view-construction-hammers-still-life.jpg);
     background-position: center;
