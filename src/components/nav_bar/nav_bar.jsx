@@ -35,7 +35,7 @@ const Nav_bar = () => {
             <div id="menu" className="menu_nav">
                 <div onClick={()=>go_to('')}>Inicio</div>
                 <div onClick={()=>go_to('proyectos')}>Proyectos</div>
-                <div onClick={()=>go_to('reformas')}>Reformas</div>
+                <div onClick={()=>go_to('info')}>Quien Somos</div>
                 <div onClick={()=>go_to('blog')}>Blog</div>
                 <div onClick={()=>go_to('contacto')}>Contacto</div>
                 <div className="icons">

@@ -61,6 +61,7 @@
     font-size: 3em;
     }
     .menu_home_cards{
+        cursor: pointer;
         flex-direction: row;
     }
     .card_home {
