@@ -17,6 +17,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background-image: url(../img/top-view-construction-hammers-still-life.jpg);
     background-position: center;
     background-repeat: no-repeat;

@@ -34,7 +34,6 @@
     margin-top: 4vh;
 }
 
-
 .card_home::before {
     content: "";
     position: absolute;
@@ -55,4 +54,16 @@
 }
 .card_home:nth-child(3){
     background-image: url(../img/fibra.jpg);
+}
+
+@media (min-width: 768px) {
+    .home h1{
+    font-size: 3em;
+    }
+    .menu_home_cards{
+        flex-direction: row;
+    }
+    .card_home {
+    width: 30vw;
+}
 }
