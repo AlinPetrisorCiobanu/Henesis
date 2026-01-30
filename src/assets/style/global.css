@@ -8,7 +8,7 @@ body{
   overflow: hidden;
 }
 
-.Container{
+.Container {
     width: 100%;
     min-height: 100vh;
     padding: 0;
@@ -21,6 +21,21 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;    
+    overflow: hidden;     
+}
+
+.Container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+.Container > * {
+    position: relative;
+    z-index: 1;
 }
 
 .Container h1.Home{

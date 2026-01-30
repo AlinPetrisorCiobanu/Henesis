@@ -7,7 +7,13 @@ const Home = () => {
             <div className="Container">
             <Nav_bar />
                 <div className="home">
-                    <h1 className="Home">Página Principal de HENESIS</h1>
+                    <h1>Henesis</h1>
+                    <h1>Soluciones para todo</h1>
+                    <div className="menu_home_cards">
+                        <div className="card_home"><h2>Obras</h2></div>
+                        <div className="card_home"><h2>Reformas</h2></div>
+                        <div className="card_home"><h2>Fibra Optica</h2></div>
+                    </div>
                 </div>
             </div>
         </div>

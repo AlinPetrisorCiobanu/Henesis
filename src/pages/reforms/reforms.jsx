@@ -5,6 +5,9 @@ const Reforms = () => {
         <div>
             <div className="Container">
             <Nav_bar />
+            <div className="part_reforms">
+                
+            </div>
                 <h1 className="Home">Reformas</h1>
             </div>
         </div>
