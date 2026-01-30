@@ -1,5 +1,6 @@
 import Nav_bar from "../../components/nav_bar/nav_bar"
 import "../../assets/style/home_style.css"
+import Footer from "../../components/footer/footer"
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
                         <div className="card_home"><h2>Fibra Optica</h2></div>
                     </div>
                 </div>
+            <Footer />
             </div>
         </div>
     )
