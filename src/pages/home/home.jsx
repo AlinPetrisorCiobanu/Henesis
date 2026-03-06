@@ -11,9 +11,7 @@ const Home = () => {
         <div className="Container">
 
             <Nav_bar />
-
-            {/* HERO */}
-
+            
             <section className="hero">
 
                 <div className="hero_overlay"></div>
