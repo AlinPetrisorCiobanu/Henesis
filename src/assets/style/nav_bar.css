@@ -1,176 +1,260 @@
-/* Estilo phone */
-#nav_bar {
-    width: 100%;
-    min-height: 10vh;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-bottom: 1px solid black;
-    background-color: rgba(255, 255, 255, 0.911);
+/* NAVBAR */
+
+.navbar{
+
+    width:100%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid #e5e7eb;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
-.nav_info {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1em;
+.nav_container{
+
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:12px 25px;
 }
 
-.logo img {
-    width: 20vw;
-    min-width: 70px;
+/* LOGO */
+
+.logo img{
+
+    height:55px;
+    width:auto;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-/* Diseño personal menu hamburguesa */
-.menu_hamburguesa {
-    width: 40px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+.logo img:hover{
+
+    transform:scale(1.05);
 }
 
-.menu_hamburguesa div {
-    width: 100%;
-    height: 4px;
-    background-color: black;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    transform-origin: center;
+/* MENU DESKTOP */
+
+.menu{
+
+    display:flex;
+    align-items:center;
+    gap:28px;
 }
 
-.menu_hamburguesa.active div:nth-child(1) {
-    transform: rotate(45deg) translate(13px, 5px);
+.menu span{
+
+    font-size:0.95rem;
+    font-weight:500;
+
+    color:#374151;
+    cursor:pointer;
+
+    position:relative;
+    transition:0.25s;
 }
 
-.menu_hamburguesa.active div:nth-child(2) {
-    opacity: 0;
+.menu span::after{
+
+    content:"";
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0%;
+    height:2px;
+
+    background:#F59E0B;
+
+    transition:0.3s;
 }
 
-.menu_hamburguesa.active div:nth-child(3) {
-    transform: rotate(-45deg) translate(13px, -5px);
+.menu span:hover::after{
+
+    width:100%;
 }
 
-/* Diseño del menu desplegable */
+/* BOTON CONTACTO */
 
-.menu_nav {
-    width: 100%;
-    min-height: 100vh;
-    display: none;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    border: 1px solid black;
-    padding-top: 1.5em;
+.contact_btn{
+
+    background:#F59E0B;
+    color:white !important;
+
+    padding:8px 16px;
+    border-radius:6px;
+
+    transition:0.25s;
 }
 
-.menu_nav div {
-    width: 50%;
-    text-align: center;
-    padding: 1em;
-    border-bottom: 1px solid black;
-    font-size: 1.4em;
-    border-radius: 5px;
-    cursor: pointer;
+.contact_btn:hover{
+
+    background:#d97706;
 }
 
-#menu div:nth-last-child(1) {
-    width: 80%;
-    border: 0;
+/* ICONOS */
+
+.social{
+
+    display:flex;
+    gap:16px;
+    font-size:1.1rem;
+    margin-left:10px;
 }
 
-.icons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.social svg{
+
+    cursor:pointer;
+    color:#374151;
+    transition:0.25s;
 }
 
-.icons img {
-    min-width: 50px;
-    width: 2vw;
+.social svg:hover{
+
+    color:#F59E0B;
+    transform:translateY(-3px);
 }
 
-.active_menu {
-    display: flex;
+/* HAMBURGUESA */
+
+.hamburger{
+
+    width:32px;
+    height:24px;
+
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+
+    cursor:pointer;
+    z-index: 10000;
 }
 
-@media (min-width: 768px) {
 
-    #nav_bar {
-        width: 100%;
-        color: black;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.911);
-    }
+.hamburger{
 
-    .nav_info {
-        justify-content: space-between;
-        width: 40%;
-    }
+    width:32px;
+    height:24px;
 
-    .logo img {
-        width: 12vw;
-        max-width: 140px;
-        cursor: pointer;
-        transition: all 0.5s ease;
-    }
-    .logo img:hover{
-        transform: scale(1.08);
-    }
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 
-    .menu_hamburguesa {
-        display: none;
-    }
+    cursor:pointer;
 
-    .menu_nav {
-        width: 50%;
-        min-height: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-        align-items: center;
-        border: 0;
-        padding-top: 0;
-    }
+    position:relative;
+}
+/* BARRAS */
 
-    .menu_nav div {
-        min-width: 50px;
-        width: auto;
-        text-align: center;
-        padding-left: 1.5em;
-        padding-right: 1.5em;
-        border-bottom: 0px;
-        font-size: 1.1em;
-        border-radius: 0;
-    }
+.hamburger span{
 
-    .icons img {
-        min-width: 40px;
-        width: 0.4vw;
-        margin-left: 0.7em;
-        margin-right: 0.7em;
-        transition: all 0.5s ease;
-    }
+    width:100%;
+    height:3px;
 
-    .icons img:hover {
-        transform: translateY(-7px) scale(1.1);
-    }
+    background:#1f2937;
 
-    #menu div:hover {
-        border-bottom: 3px solid slategray;
-    }
+    border-radius:2px;
 
-    #menu div:nth-last-child(1) {
-        width: auto;
-        border: 0;
-    }
+    transition:
+        transform 0.35s ease,
+        opacity 0.25s ease,
+        background 0.25s ease;
+}
+
+/* ANIMACIÓN A X */
+
+.hamburger.active span:nth-child(1){
+
+    transform:translateY(10px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+
+    opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+
+    transform:translateY(-10px) rotate(-45deg);
+}
+
+/* COLOR CUANDO ESTÁ ACTIVO */
+
+.hamburger.active span{
+
+    background:#f59e0b;
+}
+
+/* MOBILE MENU */
+
+.mobile_menu{
+
+    position:fixed;
+    top:0;
+    right:-100%;
+
+    width:260px;
+    height:100vh;
+
+    background:#1F2937;
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding-top:100px;
+    gap:30px;
+
+    transition:0.35s ease;
+}
+
+.mobile_menu.open{
+
+    right:0;
+}
+
+.mobile_menu span{
+
+    font-size:1.2rem;
+    cursor:pointer;
+}
+
+.mobile_social{
+
+    display:flex;
+    gap:25px;
+    font-size:1.6rem;
+    margin-top:30px;
+}
+
+.mobile_social svg{
+
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.menu{
+
+display:none;
+}
+
+.hamburger{
+
+display:flex;
+}
 
 }

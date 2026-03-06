@@ -1,52 +1,77 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../../assets/style/nav_bar.css"
-import logo from "../../assets/img/logo_henesis.png"
-import instagram from "../../assets/icons/instagram.svg"
-import facebook from "../../assets/icons/facebook.svg"
-import tiktok from "../../assets/icons/tiktok.svg"
-
+import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
+import logo from "../../assets/img/logo_henesis.png";
 
 const Nav_bar = () => {
+
     const navigate = useNavigate();
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    const active_menu = () => {
-    hamburguesa.classList.toggle('active')
-    menu.classList.toggle('active_menu')
-    document.body.classList.toggle("no-scroll")
+    const goTo = (path) => {
+        navigate(`/${path}`);
+        setMenuOpen(false);
     };
-
-    const go_to = (path) => {
-        navigate(`/${path}`)
-    }
 
     return (
 
-        <div id="nav_bar">
-            <div className="nav_info">
-                <div className="logo" onClick={()=>go_to('')}>
-                    <img src={logo} alt="Logo de la empresa" />
-                </div>
-                <div id="hamburguesa" className="menu_hamburguesa" onClick={active_menu}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-            <div id="menu" className="menu_nav">
-                <div onClick={()=>go_to('')}>Inicio</div>
-                <div onClick={()=>go_to('proyectos')}>Proyectos</div>
-                <div onClick={()=>go_to('info')}>Quien Somos</div>
-                <div onClick={()=>go_to('blog')}>Blog</div>
-                <div onClick={()=>go_to('contacto')}>Contacto</div>
-                <div className="icons">
-                    <img src={instagram} alt="logo instagram coloreado" />
-                    <img src={facebook} alt="logo facebook coloreado" />
-                    <img src={tiktok} alt="logo tiktok coloreado" />
-                </div>
-            </div>
-        </div>
+       <nav className="navbar">
 
-    )
-}
+            <div className="nav_container">
+
+                <div className="logo" onClick={() => goTo("")}>
+                    <img src={logo} alt="logo empresa"/>
+                </div>
+
+                <div className="menu">
+
+                    <span onClick={() => goTo("")}>Inicio</span>
+                    <span onClick={() => goTo("proyectos")}>Proyectos</span>
+                    <span onClick={() => goTo("info")}>Quién Somos</span>
+                    <span onClick={() => goTo("blog")}>Blog</span>
+                    <span className="contact_btn" onClick={() => goTo("contacto")}>
+                        Contacto
+                    </span>
+
+                    <div className="social">
+                        <FaInstagram/>
+                        <FaFacebookF/>
+                        <FaTiktok/>
+                    </div>
+
+                </div>
+
+                <div
+                    className={`hamburger ${menuOpen ? "active" : ""}`}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <div className={`mobile_menu ${menuOpen ? "open" : ""}`}>
+
+                <span onClick={() => goTo("")}>Inicio</span>
+                <span onClick={() => goTo("proyectos")}>Proyectos</span>
+                <span onClick={() => goTo("info")}>Quién Somos</span>
+                <span onClick={() => goTo("blog")}>Blog</span>
+                <span className="contact_btn" onClick={() => goTo("contacto")}>
+                    Contacto
+                </span>
+
+                <div className="mobile_social">
+                    <FaInstagram/>
+                    <FaFacebookF/>
+                    <FaTiktok/>
+                </div>
+
+            </div>
+
+        </nav>
+    );
+};
 
 export default Nav_bar;
