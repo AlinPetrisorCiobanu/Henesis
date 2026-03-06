@@ -98,7 +98,6 @@
 }
 
 .contact_btn:hover{
-
     background:#d97706;
 }
 
@@ -128,31 +127,19 @@
 /* HAMBURGUESA */
 
 .hamburger{
-
+    
     width:32px;
     height:24px;
-
+    
     display:none;
     flex-direction:column;
     justify-content:space-between;
-
+    
     cursor:pointer;
-    z-index: 10000;
-}
-
-
-.hamburger{
-
-    width:32px;
-    height:24px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-
-    cursor:pointer;
-
+    
     position:relative;
+    
+    z-index: 10000;
 }
 /* BARRAS */
 
@@ -206,10 +193,11 @@
     width:260px;
     height:100vh;
 
-    background:#1F2937;
+    background:#1f2937;
     color:white;
 
-    display:flex;
+    display:none;
+
     flex-direction:column;
     align-items:center;
 
@@ -220,7 +208,7 @@
 }
 
 .mobile_menu.open{
-
+    display: flex;
     right:0;
 }
 
@@ -248,7 +236,6 @@
 @media(max-width:900px){
 
 .menu{
-
 display:none;
 }
 

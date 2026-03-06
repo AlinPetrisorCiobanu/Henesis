@@ -1,34 +1,59 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 import Nav_bar from "../../components/nav_bar/nav_bar"
 import Footer from "../../components/footer/footer"
-import "../../assets/style/home_style.css"
 
 const Home = () => {
-    const navigate = useNavigate();
 
-    const go_to = (path) => {
-        navigate(`/${path}`)
-    }
+    const navigate = useNavigate()
 
     return (
         <div className="Container">
+
             <Nav_bar />
-            <div className="home">
-                <h1>Henesis</h1>
-                <h1>Soluciones para todo</h1>
-                <div className="menu_home_cards">
-                    <div className="card_home" onClick={() => go_to('obra')}>
-                        <h2>Obra</h2>
+
+            <section className="hero">
+
+                <div className="hero_overlay"></div>
+
+                <div className="hero_content">
+
+                    <h1>
+                        Construimos <span>confianza</span>
+                    </h1>
+
+                    <h2>
+                        Espacios que inspiran
+
+                    </h2>
+
+                    <p>
+                        Soluciones que duran
+                    </p>
+
+                    <div className="hero_buttons">
+
+                        <button
+                            className="btn_primary"
+                            onClick={() => navigate("/contacto")}
+                        >
+                            Solicitar presupuesto
+                        </button>
+
+                        <button
+                            className="btn_secondary"
+                            onClick={() => navigate("/proyectos")}
+                        >
+                            Ver proyectos
+                        </button>
+
                     </div>
-                    <div className="card_home" onClick={() => go_to('reforma')}>
-                        <h2>Reforma</h2>
-                    </div>
-                    <div className="card_home" onClick={() => go_to('fibra')}>
-                        <h2>Fibra Optica</h2>
-                    </div>
+
                 </div>
-            </div>
+
+            </section>
+
             <Footer />
+
         </div>
     )
 }
