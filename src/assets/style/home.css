@@ -1,135 +1,185 @@
+/* HERO */
+
 .hero{
 
-    width:100%;
-    height:90vh;
+height:90vh;
+background-image:url("../img/bg_home.png");
+background-size:cover;
+background-position:center;
 
-    background-image:url("../img/bg_home.png");
-    background-size:cover;
-    background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    position:relative;
-
-    text-align:center;
+position:relative;
+text-align:center;
 }
 
 .hero_overlay{
 
-    position:absolute;
-    width:100%;
-    height:100%;
+position:absolute;
+width:100%;
+height:100%;
 
-    background:linear-gradient(
-        rgba(0,0,0,0.65),
-        rgba(0,0,0,0.55)
-    );
+background:linear-gradient(
+rgba(0,0,0,0.65),
+rgba(0,0,0,0.55)
+);
 }
 
 .hero_content{
 
-    position:relative;
-    color:white;
-
-    max-width:900px;
-    padding:20px;
+position:relative;
+color:white;
+max-width:900px;
 }
-
-/* TITULO */
 
 .hero_content h1{
 
-    font-size:4rem;
-    font-weight:700;
-
-    margin-bottom:10px;
+font-size:4rem;
+margin-bottom:10px;
 }
 
-.hero_content h1 span{
+.hero_content span{
 
-    color:#f59e0b;
+color:#f59e0b;
 }
-
-/* SUBTITULO */
 
 .hero_content h2{
 
-    font-size:1.6rem;
-    font-weight:400;
-
-    margin-bottom:15px;
-}
-
-/* TEXTO */
-
-.hero_content p{
-
-    font-size:1rem;
-    opacity:0.9;
-
-    margin-bottom:30px;
+font-weight:400;
+margin-bottom:30px;
 }
 
 /* BOTONES */
 
 .hero_buttons{
 
-    display:flex;
-    justify-content:center;
-    gap:20px;
+display:flex;
+gap:20px;
+justify-content:center;
 }
-
-/* BOTON PRINCIPAL */
 
 .btn_primary{
 
-    background:#f59e0b;
-    color:white;
+background:#f59e0b;
+border:none;
+color:white;
 
-    border:none;
-    padding:14px 28px;
+padding:14px 28px;
 
-    font-size:1rem;
-    font-weight:600;
+font-weight:600;
+border-radius:6px;
 
-    border-radius:6px;
-
-    cursor:pointer;
-
-    transition:0.3s;
+cursor:pointer;
+transition:0.3s;
 }
 
 .btn_primary:hover{
 
-    background:#d97706;
-    transform:translateY(-2px);
+background:#d97706;
+transform:translateY(-3px);
 }
-
-/* BOTON SECUNDARIO */
 
 .btn_secondary{
 
-    background:transparent;
-    border:2px solid white;
+background:transparent;
+border:2px solid white;
+color:white;
 
-    color:white;
+padding:12px 26px;
+border-radius:6px;
 
-    padding:12px 26px;
-
-    font-size:1rem;
-    border-radius:6px;
-
-    cursor:pointer;
-
-    transition:0.3s;
+cursor:pointer;
 }
 
-.btn_secondary:hover{
+/* SERVICIOS */
 
-    background:white;
-    color:black;
+.services{
+
+padding:100px 20px;
+text-align:center;
+background:#f9fafb;
+}
+
+.services h2{
+
+font-size:2.5rem;
+margin-bottom:60px;
+}
+
+.services_grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+max-width:1100px;
+margin:auto;
+}
+
+.service_card{
+
+background:white;
+padding:40px;
+
+border-radius:10px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
+transition:0.3s;
+}
+
+.service_card:hover{
+
+transform:translateY(-10px);
+}
+
+.service_card svg{
+
+font-size:3rem;
+color:#f59e0b;
+margin-bottom:20px;
+}
+
+/* STATS */
+
+.stats{
+
+background:#1f2937;
+color:white;
+
+display:flex;
+justify-content:center;
+gap:80px;
+
+padding:80px 20px;
+text-align:center;
+}
+
+.stat h3{
+
+font-size:3rem;
+color:#f59e0b;
+}
+
+/* CTA */
+
+.cta{
+
+padding:100px 20px;
+text-align:center;
+}
+
+.cta h2{
+
+font-size:2.5rem;
+margin-bottom:15px;
+}
+
+.cta p{
+
+margin-bottom:30px;
+color:#555;
 }
 
 /* RESPONSIVE */
@@ -138,12 +188,13 @@
 
 .hero_content h1{
 
-font-size:2.6rem;
+font-size:2.5rem;
 }
 
-.hero_content h2{
+.stats{
 
-font-size:1.2rem;
+flex-direction:column;
+gap:40px;
 }
 
 .hero_buttons{
