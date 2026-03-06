@@ -77,7 +77,7 @@ const Footer = () => {
                         <h4>Contacto</h4>
                         <ul>
                             <li>📍 Madrid, España</li>
-                            <li>📞 +34 600 000 000</li>
+                            <li>📞 +34 624 250 761</li>
                             <li>✉️ info@henesis.com</li>
                         </ul>
                     </div>

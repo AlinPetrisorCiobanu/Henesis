@@ -1,0 +1,142 @@
+/* HERO */
+.contact_hero{
+    background:#f59e0b;
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.contact_hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.contact_hero p{
+    font-size:1.2rem;
+    opacity:0.9;
+}
+
+/* GRID FORM + INFO */
+.contact_form_section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    max-width:1000px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+/* INFO */
+.contact_info{
+    background:#1f2937;
+    color:white;
+    padding:40px;
+    border-radius:10px;
+}
+
+.contact_info h3{
+    margin-bottom:20px;
+    color:#f59e0b;
+}
+
+/* FORM */
+.contact_form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact_form input,
+.contact_form textarea{
+    padding:15px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:1rem;
+    width:100%;
+    resize:none;
+}
+
+/* BOTONES */
+.contact_buttons{
+    display:flex;
+    gap:15px;
+    margin-top:10px;
+}
+
+.btn_submit{
+    background:#f59e0b;
+    color:white;
+    font-weight:600;
+    border:none;
+    padding:15px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn_submit:hover{
+    background:#d97706;
+    transform:translateY(-2px);
+}
+
+.btn_whatsapp{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:6px;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn_whatsapp:hover{
+    background:#128c7e;
+    transform:translateY(-2px);
+}
+
+/* MENSAJE DE ÉXITO */
+.success_msg{
+    color:green;
+    margin-top:10px;
+    font-weight:600;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .contact_form_section{
+        grid-template-columns:1fr;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .contact_form input,
+    .contact_form textarea{
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ANIMACIONES DE ENTRADA */
+.fade_up,
+.fade_left,
+.fade_right,
+.fade_field{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all 0.6s ease-out;
+}
+
+.fade_left{ transform:translateX(-50px); }
+.fade_right{ transform:translateX(50px); }
+
+.visible{
+    opacity:1;
+    transform:translate(0,0);
+}
+
+/* Animación secuencial para campos */
+.fade_field{
+    transition:all 0.6s ease-out;
+}
