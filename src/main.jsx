@@ -7,6 +7,7 @@ import "./assets/style/nav_bar.css"
 import "./assets/style/footer.css"
 import "./assets/style/projects.css"
 import "./assets/style/contact.css"
+import "./assets/style/register.css"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

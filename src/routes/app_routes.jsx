@@ -7,6 +7,7 @@ import Info from "../pages/info/info";
 import Obra from "../pages/Obra/obra";
 import Reforma from "../pages/Reforma/reforma";
 import Fibra from "../pages/Fibra/fibra";
+import Register from "../pages/register/register";
 
 
 
@@ -22,6 +23,7 @@ const App_routes = () => {
                 <Route path="/obra" element={<Obra />} />
                 <Route path="/reforma" element={<Reforma />} />
                 <Route path="/fibra" element={<Fibra />} />
+                <Route path="/user_register" element={<Register />} />
             </Routes>
         </BrowserRouter>
     )
