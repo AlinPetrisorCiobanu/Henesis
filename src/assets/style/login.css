@@ -1,0 +1,64 @@
+/* Login */
+
+.login_wrapper{
+    max-width:400px;
+    margin:50px auto;
+    background:white;
+    padding:40px 30px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.login_title{
+    text-align:center;
+    margin-bottom:25px;
+    color:#374151;
+}
+
+.login_form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.login_form input{
+    padding:12px 15px;
+    border:1px solid #d1d5db;
+    border-radius:6px;
+    font-size:1rem;
+    transition:0.25s;
+}
+
+.login_form input:focus{
+    border-color:#F59E0B;
+    outline:none;
+}
+
+.login_form button{
+    background:#10B981;
+    color:white;
+    font-weight:600;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+.login_form button:hover{
+    background:#059669;
+}
+
+.error_msg{
+    color:#dc2626;
+    font-size:0.9rem;
+    text-align:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:500px){
+    .login_wrapper{
+        margin:30px 20px;
+        padding:30px 20px;
+    }
+}

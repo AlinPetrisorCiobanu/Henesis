@@ -1,0 +1,18 @@
+.division_info{
+    width: 100%;
+    font-size: 1.1em;
+    border-bottom: 1px solid black;
+    margin-bottom: 5em;
+}
+.division_info section{
+    margin-bottom: 1em;
+}
+.division_info .info_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.division_info section p{
+    padding: 1.6em;
+    padding-top: 0;
+}

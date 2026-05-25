@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Footer from "../../components/footer/footer"
 import Nav_bar from "../../components/nav_bar/nav_bar"
+import { setMeta } from '../../utils/seo'
 import cocina from "../../assets/img/cocina.png"
 import banio from "../../assets/img/banio.png"
 import reforma from "../../assets/img/reforma.png"
@@ -34,6 +35,13 @@ const proyectosData = [
 ]
 
 const Proyectos = () => {
+    useEffect(()=>{
+        setMeta({
+            title: 'Proyectos - Henesis',
+            description: 'Galería de proyectos y reformas realizadas por Henesis. Inspírate con nuestras obras y solicítanos presupuesto.'
+        })
+    }, [])
+
     const [visibleProjects, setVisibleProjects] = useState([])
     const [modalOpen, setModalOpen] = useState(false)
     const [currentProject, setCurrentProject] = useState(0)
@@ -54,15 +62,21 @@ const Proyectos = () => {
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
 
+    useEffect(() => {
+        if (modalOpen) {
+            const prev = document.body.style.overflow
+            document.body.style.overflow = "hidden"
+            return () => { document.body.style.overflow = prev }
+        }
+    }, [modalOpen])
+
     const openModal = (index) => {
         setCurrentProject(index)
         setModalOpen(true)
-        document.body.style.overflow = "hidden"
     }
 
     const closeModal = () => {
         setModalOpen(false)
-        document.body.style.overflow = "auto"
     }
 
     const nextProject = () => setCurrentProject((currentProject + 1) % proyectosData.length)
@@ -84,7 +98,7 @@ const Proyectos = () => {
                         className={`proyecto_card ${visibleProjects.includes(proyecto.id) ? "visible" : ""}`}
                         onClick={() => openModal(i)}
                     >
-                        <img src={proyecto.img} alt={proyecto.titulo} />
+                        <img src={proyecto.img} alt={proyecto.titulo} loading="lazy" />
                         <div className="overlay">
                             <h3>{proyecto.titulo}</h3>
                         </div>

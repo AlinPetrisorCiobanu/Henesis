@@ -8,6 +8,8 @@ import "./assets/style/footer.css"
 import "./assets/style/projects.css"
 import "./assets/style/contact.css"
 import "./assets/style/register.css"
+import "./assets/style/login.css"
+import "./assets/style/info.css"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

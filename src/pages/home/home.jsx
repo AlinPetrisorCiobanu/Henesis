@@ -3,9 +3,19 @@ import Footer from "../../components/footer/footer"
 import { FaHammer, FaTools, FaNetworkWired } from "react-icons/fa"
 import { useNavigate } from "react-router-dom"
 
+import { useEffect } from 'react'
+import { setMeta } from '../../utils/seo'
+
 const Home = () => {
 
     const navigate = useNavigate()
+
+    useEffect(()=>{
+        setMeta({
+            title: 'Henesis — Reformas y Construcción en Madrid',
+            description: 'Reformas integrales, obra nueva y rehabilitación. Presupuestos personalizados y garantía de calidad en Madrid.'
+        })
+    }, [])
 
     return (
         <div className="Container">
@@ -46,6 +56,18 @@ const Home = () => {
 
                 </div>
 
+            </section>
+
+            {/* POR QUE ELEGIRNOS */}
+
+            <section className="why_choose">
+                <h2>Por qué elegir Henesis</h2>
+                <ul>
+                    <li><strong>Experiencia comprobada:</strong> equipo técnico con más de 10 años en reformas y obra.</li>
+                    <li><strong>Soluciones a medida:</strong> diseño, gestión de obra y entrega llave en mano.</li>
+                    <li><strong>Transparencia:</strong> presupuestos detallados y comunicación durante todo el proyecto.</li>
+                    <li><strong>Garantía:</strong> materiales certificados y garantía de ejecución.</li>
+                </ul>
             </section>
 
 

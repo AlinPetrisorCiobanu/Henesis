@@ -1,247 +1,188 @@
 /* NAVBAR */
-
-.navbar{
-
-    width:100%;
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    background:rgba(255,255,255,0.85);
-    backdrop-filter:blur(10px);
-
-    border-bottom:1px solid #e5e7eb;
-
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.nav_container{
-
-    max-width:1200px;
-    margin:auto;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:12px 25px;
+/* CONTENEDOR */
+.nav_container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 25px;
 }
 
 /* LOGO */
-
-.logo img{
-
-    height:80px;
-    width:auto;
-    cursor:pointer;
-    transition:0.3s;
+.logo img {
+  height: 70px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.logo img:hover {
+  transform: scale(1.05);
 }
 
-.logo img:hover{
-
-    transform:scale(1.05);
+/* MENU DESKTOP - Alineado a la derecha */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: flex-end; /* menú pegado a la derecha */
+  flex: 1;
 }
 
-/* MENU DESKTOP */
-
-.menu{
-
-    display:flex;
-    align-items:center;
-    gap:28px;
+.menu span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.25s;
 }
 
-.menu span{
-
-    font-size:0.95rem;
-    font-weight:500;
-
-    color:#374151;
-    cursor:pointer;
-
-    position:relative;
-    transition:0.25s;
+.menu span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #f59e0b;
+  transition: width 0.3s;
 }
 
-.menu span::after{
-
-    content:"";
-    position:absolute;
-
-    left:0;
-    bottom:-6px;
-
-    width:0%;
-    height:2px;
-
-    background:#F59E0B;
-
-    transition:0.3s;
+.menu span:hover::after {
+  width: 100%;
 }
 
-.menu span:hover::after{
-
-    width:100%;
+/* BOTONES SUAVES Y CÁLIDOS */
+.contact_btn,
+.login_btn,
+.register_btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+  color: #fff;
+  background: #f9a66d; /* color cálido y sutil */
 }
 
-/* BOTON CONTACTO */
-
-.contact_btn{
-
-    background:#F59E0B;
-    color:white !important;
-
-    padding:8px 16px;
-    border-radius:6px;
-
-    transition:0.25s;
-}
-
-.contact_btn:hover{
-    background:#d97706;
+.contact_btn:hover,
+.login_btn:hover,
+.register_btn:hover {
+  background: #f2874a; /* hover más intenso */
 }
 
 /* ICONOS */
-
-.social{
-
-    display:flex;
-    gap:16px;
-    font-size:1.1rem;
-    margin-left:10px;
+.social {
+  display: flex;
+  gap: 16px;
+  font-size: 1.1rem;
 }
-
-.social svg{
-
-    cursor:pointer;
-    color:#374151;
-    transition:0.25s;
+.social svg {
+  cursor: pointer;
+  color: #374151;
+  transition: transform 0.25s, color 0.25s;
 }
-
-.social svg:hover{
-
-    color:#F59E0B;
-    transform:translateY(-3px);
+.social svg:hover {
+  color: #f59e0b;
+  transform: translateY(-3px);
 }
 
 /* HAMBURGUESA */
-
-.hamburger{
-    
-    width:32px;
-    height:24px;
-    
-    display:none;
-    flex-direction:column;
-    justify-content:space-between;
-    
-    cursor:pointer;
-    
-    position:relative;
-    
-    z-index: 10000;
+.hamburger {
+  width: 32px;
+  height: 24px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 10000;
 }
-/* BARRAS */
-
-.hamburger span{
-
-    width:100%;
-    height:3px;
-
-    background:#1f2937;
-
-    border-radius:2px;
-
-    transition:
-        transform 0.35s ease,
-        opacity 0.25s ease,
-        background 0.25s ease;
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background: #1f2937;
+  border-radius: 2px;
+  transition: transform 0.35s, opacity 0.25s, background 0.25s;
 }
-
-/* ANIMACIÓN A X */
-
-.hamburger.active span:nth-child(1){
-
-    transform:translateY(10px) rotate(45deg);
+.hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
 }
-
-.hamburger.active span:nth-child(2){
-
-    opacity:0;
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
 }
-
-.hamburger.active span:nth-child(3){
-
-    transform:translateY(-10px) rotate(-45deg);
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
 }
-
-/* COLOR CUANDO ESTÁ ACTIVO */
-
-.hamburger.active span{
-
-    background:#f59e0b;
+.hamburger.active span {
+  background: #f59e0b;
 }
 
 /* MOBILE MENU */
-
-.mobile_menu{
-
-    position:fixed;
-    top:0;
-    right:-100%;
-
-    width:260px;
-    height:100vh;
-
-    background:#1f2937;
-    color:white;
-
-    display:none;
-
-    flex-direction:column;
-    align-items:center;
-
-    padding-top:100px;
-    gap:30px;
-
-    transition:0.35s ease;
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 260px;
+  height: 100vh;
+  background: #1f2937;
+  color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  gap: 24px;
+  transition: right 0.35s ease;
+}
+.mobile_menu.open {
+  display: flex;
+  right: 0;
+}
+.mobile_menu span {
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 80%;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 8px;
+}
+.mobile_menu span:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+.mobile_menu .contact_btn,
+.mobile_menu .login_btn,
+.mobile_menu .register_btn {
+  background: #f9a66d; /* mismo color cálido */
 }
 
-.mobile_menu.open{
-    display: flex;
-    right:0;
+/* MOBILE SOCIAL */
+.mobile_social {
+  display: flex;
+  gap: 25px;
+  font-size: 1.6rem;
+  margin-top: 20px;
 }
-
-.mobile_menu span{
-
-    font-size:1.2rem;
-    cursor:pointer;
-}
-
-.mobile_social{
-
-    display:flex;
-    gap:25px;
-    font-size:1.6rem;
-    margin-top:30px;
-}
-
-.mobile_social svg{
-
-    cursor:pointer;
+.mobile_social svg {
+  cursor: pointer;
 }
 
 /* RESPONSIVE */
-
-@media(max-width:900px){
-
-.menu{
-display:none;
-}
-
-.hamburger{
-
-display:flex;
-}
-
+@media (max-width: 900px) {
+  .menu {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
 }

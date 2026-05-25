@@ -1,8 +1,17 @@
-import { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Footer from "../../components/footer/footer"
 import Nav_bar from "../../components/nav_bar/nav_bar"
 
+import { setMeta } from '../../utils/seo'
+
 const Contact = () => {
+    useEffect(()=>{
+        setMeta({
+            title: 'Contacto - Henesis',
+            description: 'Contacta con Henesis para reformas, obras y proyectos. Pide presupuesto presencial o por WhatsApp.'
+        })
+    }, [])
+
 
     const [formData, setFormData] = useState({
         nombre: "",
@@ -80,7 +89,7 @@ const Contact = () => {
                 </div>
 
                 {/* Formulario */}
-                <form ref={formRef} className="contact_form">
+                <form ref={formRef} className="contact_form" onSubmit={handleSubmit}>
                     <input
                         type="text"
                         name="nombre"

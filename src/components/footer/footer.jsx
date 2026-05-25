@@ -1,15 +1,18 @@
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { FaInstagram, FaFacebookF, FaTiktok, FaArrowUp, FaWhatsapp } from "react-icons/fa"
 
 const Footer = () => {
 
-    const [showCookies, setShowCookies] = useState(false)
+    const [showCookies, setShowCookies] = useState(() => {
+        try {
+            return !localStorage.getItem("cookiesAccepted")
+        } catch {
+            return false
+        }
+    })
     const [showScrollTop, setShowScrollTop] = useState(false)
 
     useEffect(()=>{
-        const accepted = localStorage.getItem("cookiesAccepted")
-        if(!accepted) setShowCookies(true)
-
         const handleScroll = () => {
             if(window.scrollY > 300){
                 setShowScrollTop(true)
@@ -77,8 +80,8 @@ const Footer = () => {
                         <h4>Contacto</h4>
                         <ul>
                             <li>📍 Madrid, España</li>
-                            <li>📞 +34 624 250 761</li>
-                            <li>✉️ info@henesis.com</li>
+                            <li>📞 <a href="tel:+34624250761">+34 624 250 761</a></li>
+                            <li>✉️ <a href="mailto:info@henesis.com">info@henesis.com</a></li>
                         </ul>
                     </div>
 
