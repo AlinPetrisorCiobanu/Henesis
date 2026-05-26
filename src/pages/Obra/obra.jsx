@@ -7,7 +7,7 @@ const Obra = () => {
     return (
          <div className="Container">
            <Nav_bar /> 
-            <h1 className="Home">Obra</h1>
+            <h1 className="Home">Obras</h1>
             <Footer />
         </div>
 
